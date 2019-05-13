@@ -6,6 +6,9 @@
   void dormir(){//metodo dormir
     print("$nome esta dormindo!");
   }
+  void aniversario(){
+    idade++;
+  }
 }
 
   
@@ -17,4 +20,6 @@ void main(){
   pessoa.altura = 1.80;
 
   print(pessoa.nome);
+  pessoa.aniversario();
+  print(pessoa.idade);
 }
