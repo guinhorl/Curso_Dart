@@ -13,6 +13,17 @@ class Pessoa{ //Classe Pessoa com atributos
   //Esse Construtor faz a mesma coisa so que em uma linha
   Pessoa(this.nome, this.idade, this.altura);
 
+  //NAMED CONSTRUCTORS
+  Pessoa.nascer(this.nome, this.altura){
+
+  idade = 0;
+
+  //Posso chamar outra função aqui dentro também quando for instanciada
+  print("$nome nasceu!");
+  dormir();
+}
+
+
   void dormir(){//metodo dormir
     print("$nome esta dormindo!");
   }
@@ -22,9 +33,7 @@ class Pessoa{ //Classe Pessoa com atributos
 }
 
 void main(){
-  Pessoa pessoa1 = new Pessoa("Wagner Lima", 18,1.80);//NEW Objeto
-  print(pessoa1.nome);
-  pessoa1.aniversario();
-  pessoa1.dormir();
-  print(pessoa1.idade);
+  Pessoa nenem = new Pessoa.nascer("Wagner Lima",0.80);//NEW Objeto
+  print(nenem.nome);
+  print(nenem.idade);
 }
