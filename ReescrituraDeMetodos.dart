@@ -25,11 +25,16 @@ class Cachorro extends Animal {
     print("$nome fez auuuu!");
   }
    
-
-  Future brincar() async {
+  void brincar(){
     fofura += 10;
     print("A fofura do $nome almentou para $fofura");
   }
+
+  @override
+  String toString(){
+    return "Cachorro |= Nome: $nome, Peso: $peso, Fofura: $fofura";
+  }
+
 }
 class Gato extends Animal{  
 
@@ -52,6 +57,7 @@ void main() {
   doguinho.comer();
   doguinho.fazerSom();
   doguinho.brincar();
+  print(doguinho.toString());
 
   Gato cat = new Gato("Frajola", 4);
   cat.comer();
